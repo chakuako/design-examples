@@ -1,3 +1,7 @@
+package com.ferdingler;
+
+import java.util.Objects;
+
 public class Bar {
  
     public static final String BEER = "Corona";
@@ -8,7 +12,7 @@ public class Bar {
  
     public int processOrder(String drink, int quantity, boolean isStudent) {
  
-        if (quantity > 2 && (drink == BEER || drink == CIDER)) {
+        if (quantity > 2 && (Objects.equals(drink, BEER) || Objects.equals(drink, MOJITO))) {
             throw new RuntimeException("Too much alcohol, max 2 per person");
         }
  
@@ -17,7 +21,7 @@ public class Bar {
         if (drink.equals(BEER)) {
             price = 70;
         } else if (drink.equals(JUICE)) {
-            price = ingregient3() + 50;
+            price = ingredient3() + 50;
         } else if (drink.equals(COKE)) {
             price = 110;
         } else if (drink.equals(MOJITO)) {
