@@ -1,1 +1,1 @@
-# design-examples
+# Design Examples
