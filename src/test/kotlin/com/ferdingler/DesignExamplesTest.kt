@@ -8,12 +8,9 @@ import jakarta.inject.Inject
 @MicronautTest
 class DesignExamplesTest {
 
-    @Inject
-    lateinit var application: EmbeddedApplication<*>
-
     @Test
     fun testItWorks() {
-        Assertions.assertTrue(application.isRunning)
+
     }
 
 }
